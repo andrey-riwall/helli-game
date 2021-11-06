@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>game</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <div id="main-wrapper">
+
+    <div id="menu" class="">
+      <h1 class="menu__heading">Напишите ваше имя</h1>
+      <label for="menuInput">
+        <input type="text" id="menuInput">
+        <span id="menuWarn">Введите, пожалуйста, свое имя</span>
+      </label>
+      <button id="menuBtn">Начать игру</button>
+    </div>
+
+
+    <div id="main">
+
+      <div id="interface">
+        <span id="name">name</span>
+
+        <div id="health">50%</div>
+
+        <span id="time">
+          <span id="timeMin">00</span>
+          <span>:</span>
+          <span id="timeSec">00</span>
+        </span>
+      </div>
+
+      <div id="game">
+
+        <img id="helli" src="assets/media/helli.png">
+
+      </div>
+
+    </div>
+
+
+    <div id="table">
+
+      <h1 class="table__heading">Рейтинговая таблица</h1>
+
+      <ul id="tableList">
+
+        <li class="table__item table__names">
+          <span class="table__place">#</span>
+          <span class="table__name">Имя</span>
+          <span class="table__time">Время полета</span>
+        </li>
+
+      </ul>
+
+      <button id="tableBtn">Заново</button>
+
+    </div>
+  
+  </div>
+
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

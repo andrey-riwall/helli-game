@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+
+  font-family: sans-serif;
+  color: black;
+}
+
+button {
+  border: none;
+  background: none;
+
+  cursor: pointer;
+}
+
+input {
+  background: none;
+  border: none;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 0px !important;
+  height: 0px !important;
+  clip: rect(0px 0px 0px 0px) !important;
+  clip: rect(0px, 0px, 0px, 0px,) !important;
+}
+
+
+
+
+
+
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  background: gray;
+}
+
+#main-wrapper {
+  position: relative;
+
+  width: 1240px;
+  height: 920px;
+
+  overflow: hidden;
+}
+
+#main {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  background: url('../media/bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#interface {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  min-width: 120px;
+  padding: 50px 20px;
+
+  background: white;
+}
+
+#interface * {
+  font-weight: 700;
+  font-size: 24px;
+  color: green;
+}
+
+#health {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 50px;
+
+  color: black;
+  background: green;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+
+
+#menu {
+  position: absolute;
+  left: 0;
+  top: 150px;
+  bottom: 150px;
+  right: 100px;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 100px 200px;
+
+  background: orange;
+}
+
+#menu.is_closed {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu__heading {
+  color: wheat;
+  font-size: 50px;
+
+  margin-bottom: 30px;
+}
+
+#menuInput {
+  background: white;
+  font-size: 25px;
+  padding: 10px;
+  outline: none;
+}
+
+#menu label {
+  display: flex;
+  flex-direction: column;
+}
+
+#menuWarn {
+  opacity: 0;
+  visibility: hidden;
+
+  margin-top: 5px;
+  color: red;
+  font-size: 20px;
+}
+
+#menuWarn.is_active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#menuBtn {
+  font-weight: 700;
+  background: wheat;
+  padding: 20px 30px;
+  font-size: 25px;
+  color: brown;
+
+  margin-top: 30px;
+}
+
+
+
+
+#table {
+  position: absolute;
+  top: 200px;
+  bottom: 200px;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  background: #333;
+  padding: 50px 100px;
+
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+#table.is_open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.table__heading {
+  width: 100%;
+  padding: 5px 0;
+
+  color: wheat;
+  font-size: 40px;
+  border-top: 1px solid wheat;
+  border-bottom: 1px solid wheat;
+
+  margin-bottom: 20px;
+}
+
+#tableList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  width: 100%;
+}
+
+.table__item {
+  display: grid;
+  grid-template-columns: 1fr 3fr 5fr 2fr;
+  grid-gap: 100px;
+
+  width: 100%;
+  padding: 10px;
+}
+
+.table__item * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: wheat;
+  font-size: 17px;
+}
+
+.table__time {
+  grid-column: 4;
+}
+
+#tableBtn {
+  font-weight: 700;
+  background: wheat;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: brown;
+
+  margin-top: 40px;
+}
+
+
+
+
+#game {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+.col {
+  position: absolute;
+
+  width: 50px;
+  min-height: 100px;
+  max-height: 350px;
+  background: url('../media/wall.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  transition: right .2s;
+}
+
+.col-up {
+  top: 0;
+}
+
+.col-down {
+  bottom: 0;
+}
+
+
+#helli {
+  position: absolute;
+  transform: rotate(90deg);
+  left: 200px;
+  top: 358px;
+
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  
+  transition: top .1s;
+}
