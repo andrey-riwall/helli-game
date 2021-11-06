@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // health
     const table = document.getElementById('table');
     const healthEl = document.getElementById('health');
-    healthCount = 5;
+    healthCount = 50;
     function health () {
       healthCount -= 1;
       healthEl.textContent = healthCount + '%';
